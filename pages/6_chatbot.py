@@ -5,7 +5,7 @@ from utils.db import get_connection
 import google.generativeai as genai
 
 # ---------------- CONFIG ----------------
-GEMINI_API_KEY = "AIzaSyCeei7SHgd8DKnLGSzPHfSyOsr8vs-w_YQ"
+GEMINI_API_KEY = "AIzaSyCrwOwusI33_UZxi9oVWnQKqi2pCmgkChA"
 genai.configure(api_key=GEMINI_API_KEY)
 
 model = genai.GenerativeModel("gemini-2.5-flash")
@@ -173,3 +173,4 @@ User question:
                 )
                 with st.chat_message("assistant"):
                     st.markdown(reply)
+
