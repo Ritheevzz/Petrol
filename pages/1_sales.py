@@ -1,6 +1,14 @@
+import sys
+import os
+
+# Add project root to Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import streamlit as st
 import pandas as pd
 from utils.db import get_connection
+
+
 
 st.set_page_config(layout="wide")
 
@@ -131,3 +139,4 @@ with st.expander("📄 View Raw Sales Data"):
         filtered_sales.sort_values("date"),
         use_container_width=True
     )
+
